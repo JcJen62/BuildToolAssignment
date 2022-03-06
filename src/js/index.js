@@ -17,6 +17,18 @@ let todos = [
       }
 ]
 
+const addItemBtn = document.querySelector("#addBtn");
+addItemBtn.addEventListener("click", () => {
+  let newTask = {
+    title: document.querySelector("#addText").value,
+    category: "",
+    id: 0,
+    complete: false
+  }
+
+  todos.push(...newTask)
+})
+
 let containerDiv = document.querySelector('#todoContainer')
 const displayTodos = (arr) => {
     arr.forEach(element => {
