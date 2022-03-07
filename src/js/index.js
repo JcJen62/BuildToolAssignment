@@ -1,5 +1,3 @@
-import _ from 'lowdash'
-
 let todos = [
     {
         "title": "Eat",
@@ -105,7 +103,7 @@ const displayTodos = (arr) => {
 
         completeBtn.addEventListener('click', (event) => {
             cardDone.innerHTML = 'Completed! &#x2713'
-            elemIndex = _.findIndex(todos, obj => obj.id === element.id)
+            elemIndex = todos.findIndex((obj) => obj.id === element.id)
             todos[elemIndex].complete = true
         })
 
